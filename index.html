@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>MAgeCalculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo-mark" aria-hidden="true">M</div>
+      <h1>MAgeCalculator</h1>
+      <p class="subtitle">Jalali age calculator</p>
+    </header>
+
+    <section class="calculator" aria-label="Age calculator">
+      <form id="age-form" novalidate>
+        <fieldset class="date-group">
+          <legend>Date of birth</legend>
+          <div class="date-fields">
+            <label>
+              <span>Year</span>
+              <input id="birth-year" type="number" inputmode="numeric"
+                     min="1" max="3177" placeholder="e.g. 1385" required>
+            </label>
+            <label>
+              <span>Month</span>
+              <input id="birth-month" type="number" inputmode="numeric"
+                     min="1" max="12" placeholder="MM" required>
+            </label>
+            <label>
+              <span>Day</span>
+              <input id="birth-day" type="number" inputmode="numeric"
+                     min="1" max="31" placeholder="DD" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="date-group">
+          <legend>Today's date</legend>
+          <div class="date-fields">
+            <label>
+              <span>Year</span>
+              <input id="today-year" type="number" inputmode="numeric"
+                     min="1" max="3177" placeholder="e.g. 1404" required>
+            </label>
+            <label>
+              <span>Month</span>
+              <input id="today-month" type="number" inputmode="numeric"
+                     min="1" max="12" placeholder="MM" required>
+            </label>
+            <label>
+              <span>Day</span>
+              <input id="today-day" type="number" inputmode="numeric"
+                     min="1" max="31" placeholder="DD" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="calculate-button" type="submit">Calculate age</button>
+          <button class="clear-button" id="clear-button" type="button">Clear</button>
+        </div>
+      </form>
+
+      <section class="result-card" aria-live="polite">
+        <p class="result-caption">YOUR AGE</p>
+        <p id="result" class="result">Enter both dates to calculate your age</p>
+        <p id="status" class="status">Use the Jalali calendar (YYYY / MM / DD).</p>
+      </section>
+    </section>
+
+    <footer>MAgeCalculator · Jalali calendar</footer>
+  </main>
+</body>
+</html>
